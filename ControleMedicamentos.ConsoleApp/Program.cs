@@ -1,4 +1,5 @@
 ﻿using ControleMedicamentos.ConsoleApp.Compartilhado;
+using ControleMedicamentos.ConsoleApp.ModuloMedicamento;
 
 namespace ControleMedicamentos.ConsoleApp
 {
@@ -6,6 +7,11 @@ namespace ControleMedicamentos.ConsoleApp
     {
         static void Main(string[] args)
         {
+            RepositorioMedicamento repositorioMedicamento = new RepositorioMedicamento();
+            TelaMedicamento telaMedicamento = new TelaMedicamento();
+            telaMedicamento.repositorio = repositorioMedicamento;
+            telaMedicamento.tipoEntidade = "Medicamento";
+
             while (true)
             {
                 char opcaoPrincipalEscolhida = TelaPrincipal.ApresentarMenuPrincipal();
@@ -13,7 +19,7 @@ namespace ControleMedicamentos.ConsoleApp
                 if (opcaoPrincipalEscolhida == 'S' || opcaoPrincipalEscolhida == 's')
                     break;
 
-                TelaBase tela = null;
+                TelaBase tela = telaMedicamento;
 
                 char operacaoEscolhida = tela.ApresentarMenu();
 

@@ -12,6 +12,8 @@
 
             Console.WriteLine();
 
+            Console.WriteLine("Digite 2 para Cadastrar Medicamentos");
+
             Console.WriteLine("S - Sair");
 
             Console.WriteLine();
