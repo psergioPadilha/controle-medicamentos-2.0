@@ -7,11 +7,12 @@
             Console.Clear();
 
             Console.WriteLine("----------------------------------------");
-            Console.WriteLine("|       Controle de Medicamentos      |");
+            Console.WriteLine("|       Controle de Medicamentos       |");
             Console.WriteLine("----------------------------------------");
 
             Console.WriteLine();
 
+            Console.WriteLine("1 - Cadastro de Pacientes");
             Console.WriteLine("S - Sair");
 
             Console.WriteLine();
