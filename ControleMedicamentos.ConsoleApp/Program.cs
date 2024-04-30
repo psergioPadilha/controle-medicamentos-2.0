@@ -1,6 +1,7 @@
 ﻿using ControleMedicamentos.ConsoleApp.Compartilhado;
-using ControleMedicamentos.ConsoleApp.ModuloPaciente;
 using ControleMedicamentos.ConsoleApp.ModuloMedicamento;
+using ControleMedicamentos.ConsoleApp.ModuloPaciente;
+using ControleMedicamentos.ConsoleApp.ModuloRequisicao;
 
 namespace ControleMedicamentos.ConsoleApp
 {
@@ -21,6 +22,18 @@ namespace ControleMedicamentos.ConsoleApp
             telaMedicamento.repositorio = repositorioMedicamento;
             telaMedicamento.tipoEntidade = "Medicamento";
 
+            RepositorioRequisicaoSaida repositorioRequisicaoSaida = new RepositorioRequisicaoSaida();
+
+            TelaRequisicaoSaida telaRequisicaoSaida = new TelaRequisicaoSaida();
+            telaRequisicaoSaida.repositorio = repositorioRequisicaoSaida;
+            telaRequisicaoSaida.tipoEntidade = "Requisição";
+
+            telaRequisicaoSaida.telaPaciente = telaPaciente;
+            telaRequisicaoSaida.telaMedicamento = telaMedicamento;
+
+            telaRequisicaoSaida.repositorioPaciente = repositorioPaciente;
+            telaRequisicaoSaida.repositorioMedicamento = repositorioMedicamento;
+
             while (true)
             {
                 char opcaoPrincipalEscolhida = TelaPrincipal.ApresentarMenuPrincipal();
@@ -32,8 +45,12 @@ namespace ControleMedicamentos.ConsoleApp
 
                 if (opcaoPrincipalEscolhida == '1')
                     tela = telaPaciente;
+
                 else if (opcaoPrincipalEscolhida == '2')
                     tela = telaMedicamento;
+
+                else if (opcaoPrincipalEscolhida == '3')
+                    tela = telaRequisicaoSaida;
 
                 char operacaoEscolhida = tela.ApresentarMenu();
 

@@ -16,7 +16,7 @@ namespace ControleMedicamentos.ConsoleApp.ModuloMedicamento
         public string Descricao { get; set; }
         public string Lote { get; set; }
         private DateTime DataValidade { get; set; }
-        public int Quantidade { get; set; }
+        public int Quantidade { get; set; } = 5;
 
         public override string[] Validar()
         {

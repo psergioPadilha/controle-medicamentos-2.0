@@ -30,7 +30,7 @@
             return operacaoEscolhida;
         }
 
-        public void Registrar()
+        public virtual void Registrar()
         {
             ApresentarCabecalho();
 
