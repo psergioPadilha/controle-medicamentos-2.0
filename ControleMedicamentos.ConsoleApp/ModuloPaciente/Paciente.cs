@@ -23,7 +23,7 @@ namespace ControleMedicamentos.ConsoleApp.ModuloPaciente
             int contadorErros = 0;
 
             if (Nome.Length < 3)
-                erros[contadorErros++] = "O Nome do Paciente precisa conter ao menos 3 caracteres";
+                erros[contadorErros++] = "O nomeFuncionario do Paciente precisa conter ao menos 3 caracteres";
 
             if (string.IsNullOrEmpty(Telefone))
                 erros[contadorErros++] = "O Telefone precisa ser preenchido";

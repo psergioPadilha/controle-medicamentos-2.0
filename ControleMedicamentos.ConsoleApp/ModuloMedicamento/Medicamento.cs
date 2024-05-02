@@ -24,7 +24,7 @@ namespace ControleMedicamentos.ConsoleApp.ModuloMedicamento
             int contadorErros = 0;
 
             if (string.IsNullOrEmpty(Nome.Trim()))
-                erros[contadorErros++] = ("O campo \"nome\" é obrigatório");
+                erros[contadorErros++] = ("O campo \"nomeFuncionario\" é obrigatório");
 
             if (string.IsNullOrEmpty(Descricao.Trim()))
                 erros[contadorErros++] = ("O campo \"descrição\" é obrigatório");

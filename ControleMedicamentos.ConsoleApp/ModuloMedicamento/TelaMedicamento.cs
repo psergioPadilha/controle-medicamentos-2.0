@@ -17,7 +17,7 @@ namespace ControleMedicamentos.ConsoleApp.ModuloMedicamento
 
             Console.WriteLine(
                 "{0, -10} | {1, -20} | {2, -20}",
-                "Id", "Nome", "Quantidade"
+                "Id", "nomeFuncionario", "Quantidade"
             );
 
             EntidadeBase[] medicamentosCadastrados = repositorio.SelecionarTodos();
@@ -39,7 +39,7 @@ namespace ControleMedicamentos.ConsoleApp.ModuloMedicamento
 
         protected override EntidadeBase ObterRegistro()
         {
-            Console.Write("Digite o nome: ");
+            Console.Write("Digite o nomeFuncionario: ");
             string nome = Console.ReadLine();
 
             Console.Write("Digite a descrição: ");
