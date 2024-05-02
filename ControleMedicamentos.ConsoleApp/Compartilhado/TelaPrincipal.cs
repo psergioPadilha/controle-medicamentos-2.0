@@ -16,6 +16,7 @@
             Console.WriteLine("2 - Cadastro de Medicamentos");
             Console.WriteLine("3 - Cadastro de Requisições de Saída");
             Console.WriteLine("4 - Cadastro de Funcionários");
+            Console.WriteLine("5 - Cadastro de Fornecedor");
 
             Console.WriteLine("S - Sair");
 
