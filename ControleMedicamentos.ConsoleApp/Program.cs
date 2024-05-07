@@ -70,7 +70,6 @@ namespace ControleMedicamentos.ConsoleApp
                 else if (opcaoPrincipalEscolhida == '4')
                     tela = telaFuncionario;
 
-                
                 else if (opcaoPrincipalEscolhida == '5')
                     tela = telaFornecedor;
 
