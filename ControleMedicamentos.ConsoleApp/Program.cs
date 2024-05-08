@@ -11,6 +11,12 @@ namespace ControleMedicamentos.ConsoleApp
     {
         static void Main(string[] args)
         {
+            RepositorioFuncionario repositorioFuncionario = new RepositorioFuncionario();
+
+            TelaFuncionario telaFuncionario = new TelaFuncionario();
+            telaFuncionario.tipoEntidade = "Funcionário";
+            telaFuncionario.repositorio = repositorioFuncionario;
+
             RepositorioPaciente repositorioPaciente = new RepositorioPaciente();
 
             TelaPaciente telaPaciente = new TelaPaciente();
@@ -18,6 +24,12 @@ namespace ControleMedicamentos.ConsoleApp
             telaPaciente.repositorio = repositorioPaciente;
 
             telaPaciente.CadastrarEntidadeTeste();
+
+            RepositorioFornecedor repositorioFornecedor = new RepositorioFornecedor();
+
+            TelaFornecedor telaFornecedor = new TelaFornecedor();
+            telaFornecedor.repositorio = repositorioFornecedor;
+            telaFornecedor.tipoEntidade = "Fornecedor";
 
             RepositorioMedicamento repositorioMedicamento = new RepositorioMedicamento();
             TelaMedicamento telaMedicamento = new TelaMedicamento();
@@ -35,19 +47,6 @@ namespace ControleMedicamentos.ConsoleApp
 
             telaRequisicaoSaida.repositorioPaciente = repositorioPaciente;
             telaRequisicaoSaida.repositorioMedicamento = repositorioMedicamento;
-
-
-            RepositorioFornecedor repositorioFornecedor = new RepositorioFornecedor();
-
-            TelaFornecedor telaFornecedor = new TelaFornecedor();
-            telaFornecedor.repositorio = repositorioFornecedor;
-            telaFornecedor.tipoEntidade = "Fornecedor";
-
-            RepositorioFuncionario repositorioFuncionario = new RepositorioFuncionario();
-
-            TelaFuncionario telaFuncionario = new TelaFuncionario();
-            telaFuncionario.tipoEntidade = "Funcionário";
-            telaFuncionario.repositorio = repositorioFuncionario;
 
             while (true)
             {
